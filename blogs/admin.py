@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Blog
-# Register your models here.
+from .models import Post
 
-@admin.register(Blog)
-class BlogAdmin(admin.ModelAdmin):
-    list_display = ("id", "title", "content", "date_posted", )
+# Register your models here.
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display=['title', 'content']
+    
