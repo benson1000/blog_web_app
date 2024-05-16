@@ -2,7 +2,7 @@
 
 from django.test import TestCase
 from blogs.models import Post
-#from model_bakery import baker
+from model_bakery import baker
 from django.urls import reverse, resolve
 
 
@@ -12,7 +12,7 @@ class ModelTests(TestCase):
 
     def test_post_model(self):
         data=baker.make('blogs.Post', title='topic')
-        self.assertEqual(isinstance(data, Post))
+        self.assertTrue(isinstance(data, Post))
         self.assertEqual(data.title, 'topic')
 
     def test_url(self):

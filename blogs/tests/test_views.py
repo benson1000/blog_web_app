@@ -7,7 +7,7 @@ from datetime import datetime
 
 class TestViews(TestCase):
     def setUp(self):
-        self.home = reverse('home')
+        self.home_url = reverse('home')
         self.create_post_url = reverse('post-create')
         self.about_url = reverse('about')
         self.user = get_user_model().objects.create(name='John Mburu')
